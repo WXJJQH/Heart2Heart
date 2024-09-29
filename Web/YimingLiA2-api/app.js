@@ -60,5 +60,5 @@ app.get('/search', (req, res) => {
 })
 
 app.listen(5000, () => {
-  console.log('服务器在http://127.0.0.1:5000/ 启动！')
+  console.log('The server is http://127.0.0.1:5000/ Start up')
 })
