@@ -15,7 +15,7 @@ app.get('/search_page', (req, res) => {
 app.get('/get_fundraiser', (req, res) => {
   db.query('SELECT * FROM fundraiser', (error, results, fields) => {
     if (error) throw error
-    // 使用results
+    // use results
     console.log('11', results)
     res.send(JSON.stringify(results))
   })
