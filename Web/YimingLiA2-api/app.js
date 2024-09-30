@@ -15,7 +15,7 @@ app.get('/search_page', (req, res) => {
 app.get('/get_fundraiser', (req, res) => {
   db.query('SELECT * FROM fundraiser', (error, results, fields) => {
     if (error) throw error
-    // use results
+    // use results.
     console.log('11', results)
     res.send(JSON.stringify(results))
   })
@@ -25,7 +25,7 @@ app.get('/fundraiser', (req, res) => {
   let id = req.query.id
   db.query('SELECT * FROM fundraiser', (error, results, fields) => {
     if (error) throw error
-    // use results
+    // use results.
     console.log('11', results)
     let newRes = results.filter(item => item.FUNDRAISER_ID == id)
     res.send(JSON.stringify(newRes))
@@ -39,7 +39,7 @@ app.get('/search', (req, res) => {
   console.log(type, keyword, city)
   db.query('SELECT * FROM fundraiser', (error, results, fields) => {
     if (error) throw error
-    // use results
+    // use results.
     // console.log('11', results)
     let newRes = []
     if(type !== 0){
