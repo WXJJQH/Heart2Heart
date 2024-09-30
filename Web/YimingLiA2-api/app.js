@@ -25,7 +25,7 @@ app.get('/fundraiser', (req, res) => {
   let id = req.query.id
   db.query('SELECT * FROM fundraiser', (error, results, fields) => {
     if (error) throw error
-    // 使用results
+    // use results
     console.log('11', results)
     let newRes = results.filter(item => item.FUNDRAISER_ID == id)
     res.send(JSON.stringify(newRes))
