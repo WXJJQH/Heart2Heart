@@ -39,7 +39,7 @@ app.get('/search', (req, res) => {
   console.log(type, keyword, city)
   db.query('SELECT * FROM fundraiser', (error, results, fields) => {
     if (error) throw error
-    // use results. 
+    // use results.
     // console.log('11', results)
     let newRes = []
     if(type !== 0){
